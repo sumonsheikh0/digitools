@@ -47,11 +47,23 @@ export default function App() {
         <div className="flex items-center gap-6">
 
           {/* Cart Icon */}
-          <div onClick={() => setShowCart(true)} className="relative cursor-pointer">
+          <div
+            className="relative cursor-pointer"
+            onClick={() => {
+              setShowCart(true);
+
+              setTimeout(() => {
+                const section = document.getElementById("cart-section");
+                section?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "center"
+                });
+              }, 100);
+            }}
+          >
             <i className="fa-solid fa-cart-shopping text-xl"></i>
 
-            {/* Cart Count */}
-            <span className="absolute -top-2 -right-2 bg-gradient-to-r from-pink-500 to-red-500 text-white text-xs px-2 py-[2px] rounded-full shadow">
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-[2px] rounded-full">
               {cart.length}
             </span>
           </div>
@@ -61,7 +73,6 @@ export default function App() {
           <button className="bg-gradient-to-r from-purple-700 to-indigo-600 text-white px-4 py-2 rounded-full text-sm">
             Get Started
           </button>
-
         </div>
       </nav>
 
@@ -160,7 +171,7 @@ export default function App() {
 
       {/* CART */}
       {showCart && (
-        <div className="p-10">
+        <div id="cart-section" className="p-10">
           <div className="bg-white p-6 rounded-xl shadow max-w-2xl mx-auto">
             <h3 className="text-xl font-bold mb-4">Your Cart</h3>
 
