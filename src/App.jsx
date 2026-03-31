@@ -33,16 +33,18 @@ export default function App() {
       <ToastContainer />
 
       {/* NAVBAR */}
-      <nav className="sticky top-0 z-50 bg-white backdrop-blur-md border-b flex justify-between items-center px-10 py-5 bg-white shadow">
-        <h1 className="text-2xl font-bold text-purple-600">DigiTools</h1>
+      <nav className="sticky top-0 z-50 bg-white backdrop-blur-md border-b flex justify-around items-center px-10 py-5 bg-white shadow">
+        <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">DigiTools</h1>
 
-        <div className="flex gap-6 text-gray-600">
+        <div className="flex gap-6 text-gray-700">
           <span>Products</span>
           <span>Features</span>
           <span>Pricing</span>
+          <span>Testimonials</span>
+          <span>FAQ</span>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
 
           {/* Cart Icon */}
           <div onClick={() => setShowCart(true)} className="relative cursor-pointer">
@@ -56,7 +58,7 @@ export default function App() {
 
           <button className="text-sm">Login</button>
 
-          <button className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm">
+          <button className="bg-gradient-to-r from-purple-700 to-indigo-600 text-white px-4 py-2 rounded-full text-sm">
             Get Started
           </button>
 
