@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "AI Writing Pro",
+    "description": "Generate high-quality content using AI",
+    "price": 29,
+    "period": "Monthly",
+    "tag": "Best Seller",
+    "features": ["Unlimited AI", "50+ templates", "Grammar checker"],
+    "icon": "✍️"
+  },
+  {
+    "id": 2,
+    "name": "Design Templates",
+    "description": "2000+ UI templates",
+    "price": 49,
+    "period": "One-time",
+    "tag": "Popular",
+    "features": ["2000+ templates", "Commercial use"],
+    "icon": "🎨"
+  },
+  {
+    "id": 3,
+    "name": "Stock Assets",
+    "description": "Millions of stock images",
+    "price": 19,
+    "period": "Monthly",
+    "tag": "New",
+    "features": ["10M+ assets", "No attribution"],
+    "icon": "📸"
+  }
+]
