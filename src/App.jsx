@@ -517,12 +517,39 @@ export default function App() {
 </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-purple-600 to-pink-500 text-white text-center py-16">
-        <h2 className="text-3xl font-bold">Ready to Transform?</h2>
-        <button className="mt-5 bg-white text-purple-600 px-6 py-2 rounded-full">
-          Get Started
-        </button>
-      </section>
+     <section className="bg-gradient-to-r from-indigo-600 to-purple-600  text-white text-center py-24 px-6">
+
+  <h2 className="text-4xl md:text-5xl font-bold mb-4">
+    Ready To Transform Your Workflow?
+  </h2>
+
+  <p className="text-white/80 max-w-2xl mx-auto mb-8">
+    Join thousands of professionals who are already using DigiTools to work smarter.
+    <br />
+    Start your free trial today.
+  </p>
+
+  {/* Buttons */}
+  <div className="flex justify-center gap-4 flex-wrap mb-6">
+    
+    {/* Primary */}
+    <button className="bg-white text-purple-600 px-6 py-3 rounded-full font-medium shadow hover:scale-105 transition">
+      Explore Products
+    </button>
+
+    {/* Secondary */}
+    <button className="border border-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-purple-600 transition">
+      View Pricing
+    </button>
+
+  </div>
+
+  {/* Small text */}
+  <p className="text-sm text-white/70">
+    14-day free trial • No credit card required • Cancel anytime
+  </p>
+
+</section>
 
       {/* FOOTER */}
       <footer className="bg-black text-white p-10 grid md:grid-cols-4 gap-6">
