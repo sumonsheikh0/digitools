@@ -38,12 +38,12 @@ export default function App() {
       <nav className="sticky top-0 z-50 bg-white backdrop-blur-md border-b flex justify-around items-center px-10 py-5 bg-white shadow">
         <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">DigiTools</h1>
 
-        <div className="flex gap-6 text-gray-700">
-          <span>Products</span>
-          <span>Features</span>
-          <span>Pricing</span>
-          <span>Testimonials</span>
-          <span>FAQ</span>
+        <div className="flex gap-6 text-gray-700 ">
+          <span className=" hover:text-indigo-700  cursor-pointer ">Products</span>
+          <span className=" hover:text-indigo-700  cursor-pointer ">Features</span>
+          <span className=" hover:text-indigo-700  cursor-pointer ">Pricing</span>
+          <span className=" hover:text-indigo-700  cursor-pointer ">Testimonials</span>
+          <span className=" hover:text-indigo-700  cursor-pointer ">FAQ</span>
         </div>
 
 
@@ -72,7 +72,7 @@ export default function App() {
             </span>
           </div>
 
-          <button className="text-sm">Login</button>
+          <button className= " font-bold text-indigo-500 text-sm border-2 border-indigo-500 px-5 py-1.5 rounded-full hover:text-white hover:bg-gradient-to-r from-indigo-700 to-purple-600">Login</button>
 
           <button className="bg-gradient-to-r from-indigo-700 to-purple-600 text-white px-4 py-2 rounded-full text-sm">
             Get Started
@@ -84,13 +84,17 @@ export default function App() {
       <section className="max-w-7xl mx-auto grid md:grid-cols-2 gap-4 px-10 py-20 items-center">
 
         <div>
+          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-1 rounded-full text-sm font-medium mb-6">
+            <span className="w-2 h-2 bg-purple-600 rounded-full"></span>
+            New: AI-Powered Tools Available
+          </div>
           <h1 className="text-5xl font-bold leading-tight">
             Supercharge Your <br /> Digital Workflow
           </h1>
 
           <p className="text-gray-500 mt-4">
             Access premium AI tools, design assets, templates, and productivity
-  software—all in one place. Start creating faster today.
+            software—all in one place. Start creating faster today.
           </p>
 
           <div className="flex gap-4 mt-6">
