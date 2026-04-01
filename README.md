@@ -11,7 +11,8 @@ Description
 
 DigiTools helps users boost productivity by offering a curated collection of digital products such as AI tools, templates, and assets. The platform features a clean UI, interactive cart system, and responsive design for all devices.
 
-🛠️ Technologies Used
+ Technologies Used
+ =================
 ⚛️ React.js
 🎨 Tailwind CSS
 🔔 React Toastify
@@ -21,6 +22,6 @@ DigiTools helps users boost productivity by offering a curated collection of dig
 🛒 Add to Cart system with dynamic update and total calculation
 📱 Fully responsive design (mobile, tablet, desktop)
 🔥 Smooth UI interactions with animations and hover effects
-📸 Live Preview
+
 
 Live Site Link - https://digitoolsbysumon.netlify.app/
