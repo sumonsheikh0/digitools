@@ -1,16 +1,26 @@
-# React + Vite
+DigiTools
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Overview
+========
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+DigiTools is a modern web application that provides premium digital tools and resources for creators, professionals, and businesses. Users can explore products, add them to a cart, and experience a smooth and responsive UI built with modern frontend technologies.
 
-## React Compiler
+Description
+============
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+DigiTools helps users boost productivity by offering a curated collection of digital products such as AI tools, templates, and assets. The platform features a clean UI, interactive cart system, and responsive design for all devices.
 
-## Expanding the ESLint configuration
+🛠️ Technologies Used
+⚛️ React.js
+🎨 Tailwind CSS
+🔔 React Toastify
+🌐 Vite
+🎯 Font Awesome Icons
+🌟 Features
+🛒 Add to Cart system with dynamic update and total calculation
+📱 Fully responsive design (mobile, tablet, desktop)
+🔥 Smooth UI interactions with animations and hover effects
+📸 Live Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Live Site Link - https://digitoolsbysumon.netlify.app/
