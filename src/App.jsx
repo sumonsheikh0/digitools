@@ -89,11 +89,8 @@ export default function App() {
           </h1>
 
           <p className="text-gray-500 mt-4">
-            Access premium AI tools and templatesAccess premium AI tools, design assets, templates, and productivity
-            software—all in one place. Start creating faster today.
-
-            Explore Products
-
+            Access premium AI tools, design assets, templates, and productivity
+  software—all in one place. Start creating faster today.
           </p>
 
           <div className="flex gap-4 mt-6">
@@ -102,13 +99,13 @@ export default function App() {
             </button>
 
             <button className="border-2 border-indigo-600 px-6 py-3 rounded-full text-indigo-600 hover:text-white hover:bg-gradient-to-r from-indigo-700 to-purple-600 px-4 py-2 rounded-full ">
-              <i class="fa-solid fa-play"></i> Watch Demo
+              <i className="fa-solid fa-play"></i> Watch Demo
             </button>
           </div>
         </div>
 
         <img
-          src="/src/assets/banner.png"
+          src="/assets/banner.png"
           className="rounded-xl w-full max-w-md ml-auto"
         />
 
@@ -420,163 +417,220 @@ export default function App() {
 
 
       {/* PRICING */}
- <section className="py-24 bg-gray-50 text-center">
+      <section className="py-24 bg-gray-50 text-center">
 
-  {/* TITLE */}
-  <h2 className="text-4xl font-bold text-gray-800">
-    Simple, Transparent Pricing
-  </h2>
+        {/* TITLE */}
+        <h2 className="text-4xl font-bold text-gray-800">
+          Simple, Transparent Pricing
+        </h2>
 
-  <p className="text-gray-500 mt-3 mb-12">
-    Choose the plan that fits your needs. Upgrade or downgrade anytime.
-  </p>
+        <p className="text-gray-500 mt-3 mb-12">
+          Choose the plan that fits your needs. Upgrade or downgrade anytime.
+        </p>
 
-  {/* CARDS */}
-  <div className="grid md:grid-cols-3 gap-8 px-10">
+        {/* CARDS */}
+        <div className="grid md:grid-cols-3 gap-8 px-10">
 
-    {/* STARTER */}
-    <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+          {/* STARTER */}
+          <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
 
-      <h3 className="text-lg font-semibold text-gray-800">Starter</h3>
-      <p className="text-sm text-gray-400 mb-4">Perfect for getting started</p>
+            <h3 className="text-lg font-semibold text-gray-800">Starter</h3>
+            <p className="text-sm text-gray-400 mb-4">Perfect for getting started</p>
 
-      <p className="text-3xl font-bold mb-6">
-        $0 <span className="text-gray-400 text-base">/Month</span>
-      </p>
+            <p className="text-3xl font-bold mb-6">
+              $0 <span className="text-gray-400 text-base">/Month</span>
+            </p>
 
-      <ul className="text-sm text-gray-600 space-y-2 mb-8 text-left">
-        <li>✔ Access to 10 free tools</li>
-        <li>✔ Basic templates</li>
-        <li>✔ Community support</li>
-        <li>✔ 1 project per month</li>
-      </ul>
+            <ul className="text-sm text-gray-600 space-y-2 mb-8 text-left">
+              <li>✔ Access to 10 free tools</li>
+              <li>✔ Basic templates</li>
+              <li>✔ Community support</li>
+              <li>✔ 1 project per month</li>
+            </ul>
 
-      <button className="w-full py-3 rounded-full text-white bg-gradient-to-r from-indigo-600 to-purple-600">
-        Get Started Free
-      </button>
-    </div>
+            <button className="w-full py-3 rounded-full text-white bg-gradient-to-r from-indigo-600 to-purple-600">
+              Get Started Free
+            </button>
+          </div>
 
-    {/* PRO (HIGHLIGHT) */}
-    <div className="relative p-8 rounded-2xl text-white shadow-xl 
+          {/* PRO (HIGHLIGHT) */}
+          <div className="relative p-8 rounded-2xl text-white shadow-xl 
     bg-gradient-to-br from-indigo-600 to-purple-600 
     hover:scale-105 transition">
 
-      {/* BADGE */}
-      <span className="absolute -top-3 left-1/2 -translate-x-1/2 
+            {/* BADGE */}
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 
       bg-yellow-200 text-yellow-700 text-xs px-4 py-1 rounded-full font-medium shadow">
-        Most Popular
-      </span>
+              Most Popular
+            </span>
 
-      <h3 className="text-lg font-semibold">Pro</h3>
-      <p className="text-sm text-purple-100 mb-4">Best for professionals</p>
+            <h3 className="text-lg font-semibold">Pro</h3>
+            <p className="text-sm text-purple-100 mb-4">Best for professionals</p>
 
-      <p className="text-3xl font-bold mb-6">
-        $29 <span className="text-purple-200 text-base">/Month</span>
-      </p>
+            <p className="text-3xl font-bold mb-6">
+              $29 <span className="text-purple-200 text-base">/Month</span>
+            </p>
 
-      <ul className="text-sm space-y-2 mb-8 text-left">
-        <li>✔ Access to all premium tools</li>
-        <li>✔ Unlimited templates</li>
-        <li>✔ Priority support</li>
-        <li>✔ Unlimited projects</li>
-        <li>✔ Cloud sync</li>
-        <li>✔ Advanced analytics</li>
-      </ul>
+            <ul className="text-sm space-y-2 mb-8 text-left">
+              <li>✔ Access to all premium tools</li>
+              <li>✔ Unlimited templates</li>
+              <li>✔ Priority support</li>
+              <li>✔ Unlimited projects</li>
+              <li>✔ Cloud sync</li>
+              <li>✔ Advanced analytics</li>
+            </ul>
 
-      <button className="w-full py-3 rounded-full bg-white text-purple-600 font-medium">
-        Start Pro Trial
-      </button>
-    </div>
+            <button className="w-full py-3 rounded-full bg-white text-purple-600 font-medium">
+              Start Pro Trial
+            </button>
+          </div>
 
-    {/* ENTERPRISE */}
-    <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+          {/* ENTERPRISE */}
+          <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
 
-      <h3 className="text-lg font-semibold text-gray-800">Enterprise</h3>
-      <p className="text-sm text-gray-400 mb-4">For teams and businesses</p>
+            <h3 className="text-lg font-semibold text-gray-800">Enterprise</h3>
+            <p className="text-sm text-gray-400 mb-4">For teams and businesses</p>
 
-      <p className="text-3xl font-bold mb-6">
-        $99 <span className="text-gray-400 text-base">/Month</span>
-      </p>
+            <p className="text-3xl font-bold mb-6">
+              $99 <span className="text-gray-400 text-base">/Month</span>
+            </p>
 
-      <ul className="text-sm text-gray-600 space-y-2 mb-8 text-left">
-        <li>✔ Everything in Pro</li>
-        <li>✔ Team collaboration</li>
-        <li>✔ Custom integrations</li>
-        <li>✔ Dedicated support</li>
-        <li>✔ SLA guarantee</li>
-        <li>✔ Custom branding</li>
-      </ul>
+            <ul className="text-sm text-gray-600 space-y-2 mb-8 text-left">
+              <li>✔ Everything in Pro</li>
+              <li>✔ Team collaboration</li>
+              <li>✔ Custom integrations</li>
+              <li>✔ Dedicated support</li>
+              <li>✔ SLA guarantee</li>
+              <li>✔ Custom branding</li>
+            </ul>
 
-      <button className="w-full py-3 rounded-full text-white bg-gradient-to-r from-indigo-600 to-purple-600">
-        Contact Sales
-      </button>
-    </div>
+            <button className="w-full py-3 rounded-full text-white bg-gradient-to-r from-indigo-600 to-purple-600">
+              Contact Sales
+            </button>
+          </div>
 
-  </div>
+        </div>
 
-</section>
+      </section>
 
       {/* CTA */}
-     <section className="bg-gradient-to-r from-indigo-600 to-purple-600  text-white text-center py-24 px-6">
+      <section className="bg-gradient-to-r from-indigo-600 to-purple-600  text-white text-center py-24 px-6">
 
-  <h2 className="text-4xl md:text-5xl font-bold mb-4">
-    Ready To Transform Your Workflow?
-  </h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          Ready To Transform Your Workflow?
+        </h2>
 
-  <p className="text-white/80 max-w-2xl mx-auto mb-8">
-    Join thousands of professionals who are already using DigiTools to work smarter.
-    <br />
-    Start your free trial today.
-  </p>
+        <p className="text-white/80 max-w-2xl mx-auto mb-8">
+          Join thousands of professionals who are already using DigiTools to work smarter.
+          <br />
+          Start your free trial today.
+        </p>
 
-  {/* Buttons */}
-  <div className="flex justify-center gap-4 flex-wrap mb-6">
-    
-    {/* Primary */}
-    <button className="bg-white text-purple-600 px-6 py-3 rounded-full font-medium shadow hover:scale-105 transition">
-      Explore Products
-    </button>
+        {/* Buttons */}
+        <div className="flex justify-center gap-4 flex-wrap mb-6">
 
-    {/* Secondary */}
-    <button className="border border-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-purple-600 transition">
-      View Pricing
-    </button>
+          {/* Primary */}
+          <button className="bg-white text-purple-600 px-6 py-3 rounded-full font-medium shadow hover:scale-105 transition">
+            Explore Products
+          </button>
 
-  </div>
+          {/* Secondary */}
+          <button className="border border-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-purple-600 transition">
+            View Pricing
+          </button>
 
-  {/* Small text */}
-  <p className="text-sm text-white/70">
-    14-day free trial • No credit card required • Cancel anytime
-  </p>
+        </div>
 
-</section>
+        {/* Small text */}
+        <p className="text-sm text-white/70">
+          14-day free trial • No credit card required • Cancel anytime
+        </p>
+
+      </section>
 
       {/* FOOTER */}
-      <footer className="bg-black text-white p-10 grid md:grid-cols-4 gap-6">
-        <div>
-          <h2 className="font-bold text-xl">DigiTools</h2>
-          <p className="text-gray-400 mt-2">
-            Premium tools for creators
-          </p>
+      <footer className="bg-[#0B1220] text-white px-10 py-16">
+
+        <div className="grid md:grid-cols-5 gap-10">
+
+          {/* LEFT */}
+          <div>
+            <h2 className="text-2xl font-bold mb-4">DigiTools</h2>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Premium digital tools for creators, professionals, and businesses.
+              Work smarter with our suite of powerful tools.
+            </p>
+          </div>
+
+          {/* PRODUCT */}
+          <div>
+            <h3 className="font-semibold mb-4">Product</h3>
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li className="hover:text-white cursor-pointer">Features</li>
+              <li className="hover:text-white cursor-pointer">Pricing</li>
+              <li className="hover:text-white cursor-pointer">Templates</li>
+              <li className="hover:text-white cursor-pointer">Integrations</li>
+            </ul>
+          </div>
+
+          {/* COMPANY */}
+          <div>
+            <h3 className="font-semibold mb-4">Company</h3>
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li className="hover:text-white cursor-pointer">About</li>
+              <li className="hover:text-white cursor-pointer">Blog</li>
+              <li className="hover:text-white cursor-pointer">Careers</li>
+              <li className="hover:text-white cursor-pointer">Press</li>
+            </ul>
+          </div>
+
+          {/* RESOURCES */}
+          <div>
+            <h3 className="font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li className="hover:text-white cursor-pointer">Documentation</li>
+              <li className="hover:text-white cursor-pointer">Help Center</li>
+              <li className="hover:text-white cursor-pointer">Community</li>
+              <li className="hover:text-white cursor-pointer">Contact</li>
+            </ul>
+          </div>
+
+          {/* SOCIAL */}
+          <div>
+            <h3 className="font-semibold mb-4">Social Links</h3>
+
+            <div className="flex gap-4">
+
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:scale-110 transition cursor-pointer">
+                <i className="fa-brands fa-youtube"></i>
+              </div>
+
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:scale-110 transition cursor-pointer">
+                <i className="fa-brands fa-facebook-f"></i>
+              </div>
+
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:scale-110 transition cursor-pointer">
+                <i className="fa-brands fa-x-twitter"></i>
+              </div>
+
+            </div>
+          </div>
+
         </div>
 
-        <div>
-          <h3>Product</h3>
-          <p>Features</p>
-          <p>Pricing</p>
+        {/* DIVIDER */}
+        <div className="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+
+          <p>© 2026 Digitools. All rights reserved.</p>
+
+          <div className="flex gap-6 mt-3 md:mt-0">
+            <span className="hover:text-white cursor-pointer">Privacy Policy</span>
+            <span className="hover:text-white cursor-pointer">Terms of Service</span>
+            <span className="hover:text-white cursor-pointer">Cookies</span>
+          </div>
+
         </div>
 
-        <div>
-          <h3>Company</h3>
-          <p>About</p>
-          <p>Careers</p>
-        </div>
-
-        <div>
-          <h3>Social</h3>
-          <p>Facebook</p>
-          <p>Twitter</p>
-        </div>
       </footer>
     </div>
   );
