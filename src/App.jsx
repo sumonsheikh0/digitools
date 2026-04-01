@@ -347,39 +347,174 @@ export default function App() {
       )}
 
       {/* STEPS */}
-      <section className="text-center py-20">
-        <h2 className="text-3xl font-bold mb-10">Get Started</h2>
+      <section className="py-24 bg-gray-50 text-center">
 
-        <div className="grid md:grid-cols-3 gap-6 px-10">
-          {["Create Account", "Choose Product", "Start Creating"].map((step) => (
-            <div className="bg-white p-6 rounded-xl shadow">
-              <h3 className="font-bold">{step}</h3>
+        <h2 className="text-4xl font-bold text-gray-800">
+          Get Started In 3 Steps
+        </h2>
+
+        <p className="text-gray-500 mt-3 mb-12">
+          Start using premium digital tools in minutes, not hours.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-8 px-10">
+
+          {/* STEP CARD */}
+          {[
+            {
+              id: "01",
+              icon: "fa-user",
+              title: "Create Account",
+              desc: "Sign up for free in seconds. No credit card required."
+            },
+            {
+              id: "02",
+              icon: "fa-cube",
+              title: "Choose Products",
+              desc: "Browse and select tools that fit your needs."
+            },
+            {
+              id: "03",
+              icon: "fa-rocket",
+              title: "Start Creating",
+              desc: "Download and start using instantly."
+            }
+          ].map((step) => (
+
+            <div
+              key={step.id}
+              className="relative bg-white p-8 rounded-2xl shadow 
+        transition-all duration-300 ease-in-out
+        hover:-translate-y-3 hover:shadow-2xl"
+            >
+
+
+              <div className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center 
+        rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-semibold shadow-md">
+                {step.id}
+              </div>
+
+
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full 
+        bg-purple-100 flex items-center justify-center">
+
+                <i className={`fa-solid ${step.icon} text-3xl text-purple-600`}></i>
+
+              </div>
+
+              <h3 className="text-lg font-semibold text-gray-800">
+                {step.title}
+              </h3>
+
+              <p className="text-gray-500 text-sm mt-3">
+                {step.desc}
+              </p>
+
             </div>
+
           ))}
+
         </div>
       </section>
+
+
 
       {/* PRICING */}
-      <section className="text-center py-20 bg-gray-100">
-        <h2 className="text-3xl font-bold mb-10">Pricing</h2>
+ <section className="py-24 bg-gray-50 text-center">
 
-        <div className="grid md:grid-cols-3 gap-6 px-10">
-          <div className="bg-white p-6 rounded-xl shadow">
-            <h3>Starter</h3>
-            <p>$0</p>
-          </div>
+  {/* TITLE */}
+  <h2 className="text-4xl font-bold text-gray-800">
+    Simple, Transparent Pricing
+  </h2>
 
-          <div className="bg-gradient-to-r from-purple-600 to-pink-500 text-white p-6 rounded-xl shadow">
-            <h3>Pro</h3>
-            <p>$29</p>
-          </div>
+  <p className="text-gray-500 mt-3 mb-12">
+    Choose the plan that fits your needs. Upgrade or downgrade anytime.
+  </p>
 
-          <div className="bg-white p-6 rounded-xl shadow">
-            <h3>Enterprise</h3>
-            <p>$99</p>
-          </div>
-        </div>
-      </section>
+  {/* CARDS */}
+  <div className="grid md:grid-cols-3 gap-8 px-10">
+
+    {/* STARTER */}
+    <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+
+      <h3 className="text-lg font-semibold text-gray-800">Starter</h3>
+      <p className="text-sm text-gray-400 mb-4">Perfect for getting started</p>
+
+      <p className="text-3xl font-bold mb-6">
+        $0 <span className="text-gray-400 text-base">/Month</span>
+      </p>
+
+      <ul className="text-sm text-gray-600 space-y-2 mb-8 text-left">
+        <li>✔ Access to 10 free tools</li>
+        <li>✔ Basic templates</li>
+        <li>✔ Community support</li>
+        <li>✔ 1 project per month</li>
+      </ul>
+
+      <button className="w-full py-3 rounded-full text-white bg-gradient-to-r from-indigo-600 to-purple-600">
+        Get Started Free
+      </button>
+    </div>
+
+    {/* PRO (HIGHLIGHT) */}
+    <div className="relative p-8 rounded-2xl text-white shadow-xl 
+    bg-gradient-to-br from-indigo-600 to-purple-600 
+    hover:scale-105 transition">
+
+      {/* BADGE */}
+      <span className="absolute -top-3 left-1/2 -translate-x-1/2 
+      bg-yellow-200 text-yellow-700 text-xs px-4 py-1 rounded-full font-medium shadow">
+        Most Popular
+      </span>
+
+      <h3 className="text-lg font-semibold">Pro</h3>
+      <p className="text-sm text-purple-100 mb-4">Best for professionals</p>
+
+      <p className="text-3xl font-bold mb-6">
+        $29 <span className="text-purple-200 text-base">/Month</span>
+      </p>
+
+      <ul className="text-sm space-y-2 mb-8 text-left">
+        <li>✔ Access to all premium tools</li>
+        <li>✔ Unlimited templates</li>
+        <li>✔ Priority support</li>
+        <li>✔ Unlimited projects</li>
+        <li>✔ Cloud sync</li>
+        <li>✔ Advanced analytics</li>
+      </ul>
+
+      <button className="w-full py-3 rounded-full bg-white text-purple-600 font-medium">
+        Start Pro Trial
+      </button>
+    </div>
+
+    {/* ENTERPRISE */}
+    <div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+
+      <h3 className="text-lg font-semibold text-gray-800">Enterprise</h3>
+      <p className="text-sm text-gray-400 mb-4">For teams and businesses</p>
+
+      <p className="text-3xl font-bold mb-6">
+        $99 <span className="text-gray-400 text-base">/Month</span>
+      </p>
+
+      <ul className="text-sm text-gray-600 space-y-2 mb-8 text-left">
+        <li>✔ Everything in Pro</li>
+        <li>✔ Team collaboration</li>
+        <li>✔ Custom integrations</li>
+        <li>✔ Dedicated support</li>
+        <li>✔ SLA guarantee</li>
+        <li>✔ Custom branding</li>
+      </ul>
+
+      <button className="w-full py-3 rounded-full text-white bg-gradient-to-r from-indigo-600 to-purple-600">
+        Contact Sales
+      </button>
+    </div>
+
+  </div>
+
+</section>
 
       {/* CTA */}
       <section className="bg-gradient-to-r from-purple-600 to-pink-500 text-white text-center py-16">
