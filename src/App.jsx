@@ -3,6 +3,8 @@ import productsData from "./products.json";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
+
 export default function App() {
   const [cart, setCart] = useState([]);
   const [showCart, setShowCart] = useState(false);
@@ -34,7 +36,7 @@ export default function App() {
 
       {/* NAVBAR */}
       <nav className="sticky top-0 z-50 bg-white backdrop-blur-md border-b flex justify-around items-center px-10 py-5 bg-white shadow">
-        <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">DigiTools</h1>
+        <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">DigiTools</h1>
 
         <div className="flex gap-6 text-gray-700">
           <span>Products</span>
@@ -43,6 +45,8 @@ export default function App() {
           <span>Testimonials</span>
           <span>FAQ</span>
         </div>
+
+
 
         <div className="flex items-center gap-6">
 
@@ -70,33 +74,44 @@ export default function App() {
 
           <button className="text-sm">Login</button>
 
-          <button className="bg-gradient-to-r from-purple-700 to-indigo-600 text-white px-4 py-2 rounded-full text-sm">
+          <button className="bg-gradient-to-r from-indigo-700 to-purple-600 text-white px-4 py-2 rounded-full text-sm">
             Get Started
           </button>
         </div>
       </nav>
 
       {/* HERO */}
-      <section className="grid md:grid-cols-2 gap-10 px-10 py-20 items-center">
+      <section className="max-w-7xl mx-auto grid md:grid-cols-2 gap-4 px-10 py-20 items-center">
+
         <div>
           <h1 className="text-5xl font-bold leading-tight">
-            Supercharge Your Digital Workflow
+            Supercharge Your <br /> Digital Workflow
           </h1>
+
           <p className="text-gray-500 mt-4">
-            Access premium AI tools and templates
+            Access premium AI tools and templatesAccess premium AI tools, design assets, templates, and productivity
+            software—all in one place. Start creating faster today.
+
+            Explore Products
+
           </p>
 
           <div className="flex gap-4 mt-6">
-            <button className="bg-purple-600 text-white px-6 py-3 rounded-full">
+            <button className="bg-gradient-to-r from-indigo-700 to-purple-600 text-white px-6 py-2 rounded-full">
               Explore Products
             </button>
-            <button className="border px-6 py-3 rounded-full">
-              Watch Demo
+
+            <button className="border-2 border-indigo-600 px-6 py-3 rounded-full text-indigo-600 hover:text-white hover:bg-gradient-to-r from-indigo-700 to-purple-600 px-4 py-2 rounded-full ">
+              <i class="fa-solid fa-play"></i> Watch Demo
             </button>
           </div>
         </div>
 
-        <img src="/src/assets/banner.png" className="rounded-xl" />
+        <img
+          src="/src/assets/banner.png"
+          className="rounded-xl w-full max-w-md ml-auto"
+        />
+
       </section>
 
       {/* STATS */}
