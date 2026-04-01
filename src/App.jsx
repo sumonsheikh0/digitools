@@ -65,7 +65,7 @@ export default function App() {
               }, 100);
             }}
           >
-            <i className="fa-solid fa-cart-shopping text-xl"></i>
+            <i className="fa-solid fa-cart-shopping text-xl text-indigo-600"></i>
 
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-[2px] rounded-full">
               {cart.length}
@@ -115,85 +115,154 @@ export default function App() {
       </section>
 
       {/* STATS */}
-    <section className="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 text-white py-16">
+      <section className="bg-gradient-to-r from-indigo-700 to-purple-600 text-white py-16">
 
-  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 text-center">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 text-center">
 
-  
-    <div className="py-6 border-b md:border-b-0 md:border-r border-white/30">
-      <h2 className="text-5xl font-bold">50K+</h2>
-      <p className="mt-2 text-lg text-gray-200">Active Users</p>
-    </div>
 
-   
-    <div className="py-6 border-b md:border-b-0 md:border-r border-white/30">
-      <h2 className="text-5xl font-bold">200+</h2>
-      <p className="mt-2 text-lg text-gray-200">Premium Tools</p>
-    </div>
+          <div className="py-6 border-b md:border-b-0 md:border-r border-white/30">
+            <h2 className="text-5xl font-bold">50K+</h2>
+            <p className="mt-2 text-lg text-gray-200">Active Users</p>
+          </div>
 
-    
-    <div className="py-6">
-      <h2 className="text-5xl font-bold">4.9</h2>
-      <p className="mt-2 text-lg text-gray-200">Rating</p>
-    </div>
 
-  </div>
+          <div className="py-6 border-b md:border-b-0 md:border-r border-white/30">
+            <h2 className="text-5xl font-bold">200+</h2>
+            <p className="mt-2 text-lg text-gray-200">Premium Tools</p>
+          </div>
 
-</section>
+
+          <div className="py-6">
+            <h2 className="text-5xl font-bold">4.9</h2>
+            <p className="mt-2 text-lg text-gray-200">Rating</p>
+          </div>
+
+        </div>
+
+      </section>
 
       {/* PRODUCTS TITLE */}
-      <div className="text-center mt-16">
-        <h2 className="text-3xl font-bold">Premium Digital Tools</h2>
+      <div className="text-center mt-20">
 
-        <div className="flex justify-center gap-3 mt-5">
-          <button
-            onClick={() => setShowCart(false)}
-            className={`px-6 py-2 rounded-full ${!showCart ? "bg-purple-600 text-white" : "bg-gray-200"
-              }`}
-          >
-            Products
-          </button>
+        <h2 className="text-4xl font-bold text-gray-800">
+          Premium Digital Tools
+        </h2>
 
-          <button
-            onClick={() => setShowCart(true)}
-            className={`px-6 py-2 rounded-full ${showCart ? "bg-purple-600 text-white" : "bg-gray-200"
-              }`}
-          >
-            Cart ({cart.length})
-          </button>
+        <p className="text-gray-500 mt-3 max-w-xl mx-auto">
+          Choose from our curated collection of premium digital products designed
+          to boost your productivity and creativity.
+        </p>
+
+        {/* TOGGLE BUTTON */}
+        <div className="mt-6 flex justify-center">
+
+          <div className="bg-gray-100 p-1 rounded-full flex gap-1 shadow-inner">
+
+            {/* Products */}
+            <button
+              onClick={() => setShowCart(false)}
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300
+        ${!showCart
+                  ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg"
+                  : "text-gray-600 hover:bg-gray-200"
+                }`}
+            >
+              Products
+            </button>
+
+            {/* Cart */}
+            <button
+              onClick={() => setShowCart(true)}
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300
+        ${showCart
+                  ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg"
+                  : "text-gray-600 hover:bg-gray-200"
+                }`}
+            >
+              Cart ({cart.length})
+            </button>
+
+          </div>
+
         </div>
       </div>
-
       {/* PRODUCTS */}
       {!showCart && (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-10">
-          {productsData.map((product) => (
-            <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-              <h3 className="text-xl font-bold mb-2">{product.name}</h3>
-              <p className="text-gray-500 text-sm mb-3">
-                {product.description}
-              </p>
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-10 py-10">
 
-              <p className="font-bold text-lg mb-4">
-                ${product.price}/{product.period}
-              </p>
+    {productsData.map((product) => {
 
-              <ul className="text-sm mb-4 space-y-1">
-                {product.features.map((f) => (
-                  <li>✔ {f}</li>
-                ))}
-              </ul>
+      //  TAG COLOR LOGIC
+      let badgeColor = "";
+      if (product.tagType === "best") {
+        badgeColor = "bg-yellow-100 text-yellow-600";
+      } else if (product.tagType === "popular") {
+        badgeColor = "bg-purple-100 text-purple-600";
+      } else if (product.tagType === "new") {
+        badgeColor = "bg-green-100 text-green-600";
+      }
 
-              <button
-                onClick={() => addToCart(product)}
-                className="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white py-2 rounded-full"
-              >
-                Buy Now
-              </button>
-            </div>
-          ))}
+      return (
+        <div
+          key={product.id}
+          className="relative bg-white p-6 rounded-2xl shadow hover:shadow-xl transition duration-300"
+        >
+
+          {/*  BADGE */}
+          {product.tag && (
+            <span className={`absolute top-4 right-4 text-xs px-3 py-1 rounded-full ${badgeColor}`}>
+              {product.tag}
+            </span>
+          )}
+
+          {/*  ICON */}
+          <div className="w-12 h-12 mb-4 rounded-full bg-gray-100 flex items-center justify-center">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-6 h-6 object-contain"
+            />
+          </div>
+
+          {/* TITLE */}
+          <h3 className="text-lg font-semibold text-gray-800 mb-2">
+            {product.name}
+          </h3>
+
+          {/* DESC */}
+          <p className="text-gray-500 text-sm mb-4">
+            {product.description}
+          </p>
+
+          {/* PRICE */}
+          <p className="font-bold text-xl mb-4">
+            ${product.price}
+            <span className="text-sm text-gray-400">/{product.period}</span>
+          </p>
+
+          {/* FEATURES */}
+          <ul className="text-sm mb-6 space-y-2">
+            {product.features.map((f, i) => (
+              <li key={i} className="flex items-center gap-2 text-gray-600">
+                <span className="text-green-500">✔</span> {f}
+              </li>
+            ))}
+          </ul>
+
+          {/* BUTTON */}
+          <button
+            onClick={() => addToCart(product)}
+            className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-2 rounded-full hover:scale-105 transition"
+          >
+            Buy Now
+          </button>
+
         </div>
-      )}
+      );
+    })}
+
+  </div>
+)}
 
       {/* CART */}
       {showCart && (
