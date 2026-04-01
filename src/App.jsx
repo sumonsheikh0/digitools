@@ -35,10 +35,10 @@ export default function App() {
       <ToastContainer />
 
       {/* NAVBAR */}
-      <nav className="sticky top-0 z-50 bg-white backdrop-blur-md border-b flex justify-around items-center px-10 py-5 bg-white shadow">
+      <nav className="sticky top-0 z-50 bg-white border-b flex justify-between items-center px-4 md:px-10 py-4 shadow">
         <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">DigiTools</h1>
 
-        <div className="flex gap-6 text-gray-700 ">
+        <div className="hidden md:flex gap-6 text-gray-700">
           <span className=" hover:text-indigo-700  cursor-pointer ">Products</span>
           <span className=" hover:text-indigo-700  cursor-pointer ">Features</span>
           <span className=" hover:text-indigo-700  cursor-pointer ">Pricing</span>
@@ -48,7 +48,7 @@ export default function App() {
 
 
 
-        <div className="flex items-center gap-6">
+        <div className=" hidden md:flex items-center gap-6 ">
 
           {/* Cart Icon */}
           <div
@@ -81,7 +81,7 @@ export default function App() {
       </nav>
 
       {/* HERO */}
-      <section className="max-w-7xl mx-auto grid md:grid-cols-2 gap-4 px-10 py-20 items-center">
+      <section className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 px-4 md:px-10 py-16 md:py-20 items-center">
 
         <div>
           <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-1 rounded-full text-sm font-medium mb-6">
@@ -553,7 +553,7 @@ export default function App() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#0B1220] text-white px-10 py-16">
+      <footer className="bg-[#0B1220] text-white px-4 md:px-10 py-16">
 
         <div className="grid md:grid-cols-5 gap-10">
 
