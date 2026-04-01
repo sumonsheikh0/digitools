@@ -188,114 +188,160 @@ export default function App() {
       </div>
       {/* PRODUCTS */}
       {!showCart && (
-  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-10 py-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-10 py-10">
 
-    {productsData.map((product) => {
+          {productsData.map((product) => {
 
-      //  TAG COLOR LOGIC
-      let badgeColor = "";
-      if (product.tagType === "best") {
-        badgeColor = "bg-yellow-100 text-yellow-600";
-      } else if (product.tagType === "popular") {
-        badgeColor = "bg-purple-100 text-purple-600";
-      } else if (product.tagType === "new") {
-        badgeColor = "bg-green-100 text-green-600";
-      }
+            //  TAG COLOR LOGIC
+            let badgeColor = "";
+            if (product.tagType === "best") {
+              badgeColor = "bg-yellow-100 text-yellow-600";
+            } else if (product.tagType === "popular") {
+              badgeColor = "bg-purple-100 text-purple-600";
+            } else if (product.tagType === "new") {
+              badgeColor = "bg-green-100 text-green-600";
+            }
 
-      return (
-        <div
-          key={product.id}
-          className="relative bg-white p-6 rounded-2xl shadow hover:shadow-xl transition duration-300"
-        >
+            return (
+              <div
+                key={product.id}
+                className="relative bg-white p-6 rounded-2xl shadow hover:shadow-xl transition duration-300"
+              >
 
-          {/*  BADGE */}
-          {product.tag && (
-            <span className={`absolute top-4 right-4 text-xs px-3 py-1 rounded-full ${badgeColor}`}>
-              {product.tag}
-            </span>
-          )}
+                {/*  BADGE */}
+                {product.tag && (
+                  <span className={`absolute top-4 right-4 text-xs px-3 py-1 rounded-full ${badgeColor}`}>
+                    {product.tag}
+                  </span>
+                )}
 
-          {/*  ICON */}
-          <div className="w-12 h-12 mb-4 rounded-full bg-gray-100 flex items-center justify-center">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-6 h-6 object-contain"
-            />
-          </div>
+                {/*  ICON */}
+                <div className="w-12 h-12 mb-4 rounded-full bg-gray-100 flex items-center justify-center">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-6 h-6 object-contain"
+                  />
+                </div>
 
-          {/* TITLE */}
-          <h3 className="text-lg font-semibold text-gray-800 mb-2">
-            {product.name}
-          </h3>
+                {/* TITLE */}
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  {product.name}
+                </h3>
 
-          {/* DESC */}
-          <p className="text-gray-500 text-sm mb-4">
-            {product.description}
-          </p>
+                {/* DESC */}
+                <p className="text-gray-500 text-sm mb-4">
+                  {product.description}
+                </p>
 
-          {/* PRICE */}
-          <p className="font-bold text-xl mb-4">
-            ${product.price}
-            <span className="text-sm text-gray-400">/{product.period}</span>
-          </p>
+                {/* PRICE */}
+                <p className="font-bold text-xl mb-4">
+                  ${product.price}
+                  <span className="text-sm text-gray-400">/{product.period}</span>
+                </p>
 
-          {/* FEATURES */}
-          <ul className="text-sm mb-6 space-y-2">
-            {product.features.map((f, i) => (
-              <li key={i} className="flex items-center gap-2 text-gray-600">
-                <span className="text-green-500">✔</span> {f}
-              </li>
-            ))}
-          </ul>
+                {/* FEATURES */}
+                <ul className="text-sm mb-6 space-y-2">
+                  {product.features.map((f, i) => (
+                    <li key={i} className="flex items-center gap-2 text-gray-600">
+                      <span className="text-green-500">✔</span> {f}
+                    </li>
+                  ))}
+                </ul>
 
-          {/* BUTTON */}
-          <button
-            onClick={() => addToCart(product)}
-            className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-2 rounded-full hover:scale-105 transition"
-          >
-            Buy Now
-          </button>
+                {/* BUTTON */}
+                <button
+                  onClick={() => addToCart(product)}
+                  className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-2 rounded-full hover:scale-105 transition"
+                >
+                  Buy Now
+                </button>
+
+              </div>
+            );
+          })}
 
         </div>
-      );
-    })}
-
-  </div>
-)}
+      )}
 
       {/* CART */}
       {showCart && (
-        <div id="cart-section" className="p-10">
-          <div className="bg-white p-6 rounded-xl shadow max-w-2xl mx-auto">
-            <h3 className="text-xl font-bold mb-4">Your Cart</h3>
+        <div id="cart-section" className="px-10 py-16">
 
-            {cart.map((item) => (
-              <div className="flex justify-between mb-3">
-                <span>{item.name}</span>
-                <div className="flex gap-3">
-                  <span>${item.price}</span>
-                  <button
-                    onClick={() => removeItem(item.id)}
-                    className="text-red-500"
-                  >
-                    Remove
-                  </button>
-                </div>
+          <div className="bg-white p-8 rounded-2xl shadow max-w-3xl mx-auto">
+
+            <h3 className="text-xl font-semibold mb-6 text-gray-800">
+              Your Cart
+            </h3>
+
+            {/* EMPTY */}
+            {cart.length === 0 ? (
+              <div className="text-center text-gray-400 py-16">
+                <i className="fa-solid fa-cart-shopping text-5xl mb-4"></i>
+                <p>Your cart is empty</p>
               </div>
-            ))}
+            ) : (
+              <>
+                {/* ITEMS */}
+                <div className="space-y-4">
 
-            <div className="flex justify-between mt-5 font-bold">
-              <span>Total</span>
-              <span>${total}</span>
-            </div>
+                  {cart.map((item) => (
+                    <div
+                      key={item.id}
+                      className="flex items-center justify-between bg-gray-50 px-5 py-4 rounded-xl"
+                    >
+                      {/* LEFT */}
+                      <div className="flex items-center gap-4">
 
-            <button
-              onClick={checkout}
-              className="w-full mt-5 bg-gradient-to-r from-purple-600 to-pink-500 text-white py-2 rounded-full"
-            >
-              Checkout
-            </button>
+                        {/* IMAGE */}
+                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
+                          <img
+                            src={item.image}
+                            className="w-6 h-6 object-contain"
+                          />
+                        </div>
+
+                        {/* NAME + PRICE */}
+                        <div>
+                          <h4 className="font-medium text-gray-800">
+                            {item.name}
+                          </h4>
+                          <p className="text-sm text-gray-400">
+                            ${item.price}
+                          </p>
+                        </div>
+
+                      </div>
+
+                      {/* RIGHT */}
+                      <button
+                        onClick={() => removeItem(item.id)}
+                        className="text-red-500 text-sm hover:underline"
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  ))}
+
+                </div>
+
+                {/* TOTAL */}
+                <div className="flex justify-between items-center mt-8 text-gray-600">
+                  <span>Total:</span>
+                  <span className="text-xl font-semibold text-gray-800">
+                    ${total}
+                  </span>
+                </div>
+
+                {/* BUTTON */}
+                <button
+                  onClick={checkout}
+                  className="w-full mt-6 py-3 rounded-full text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-90 transition"
+                >
+                  Proceed To Checkout
+                </button>
+              </>
+            )}
           </div>
         </div>
       )}
