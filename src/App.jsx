@@ -115,20 +115,31 @@ export default function App() {
       </section>
 
       {/* STATS */}
-      <section className="bg-gradient-to-r from-purple-600 to-pink-500 text-white grid grid-cols-3 text-center py-10">
-        <div>
-          <h2 className="text-3xl font-bold">50K+</h2>
-          <p>Users</p>
-        </div>
-        <div>
-          <h2 className="text-3xl font-bold">200+</h2>
-          <p>Tools</p>
-        </div>
-        <div>
-          <h2 className="text-3xl font-bold">4.9</h2>
-          <p>Rating</p>
-        </div>
-      </section>
+    <section className="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 text-white py-16">
+
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 text-center">
+
+  
+    <div className="py-6 border-b md:border-b-0 md:border-r border-white/30">
+      <h2 className="text-5xl font-bold">50K+</h2>
+      <p className="mt-2 text-lg text-gray-200">Active Users</p>
+    </div>
+
+   
+    <div className="py-6 border-b md:border-b-0 md:border-r border-white/30">
+      <h2 className="text-5xl font-bold">200+</h2>
+      <p className="mt-2 text-lg text-gray-200">Premium Tools</p>
+    </div>
+
+    
+    <div className="py-6">
+      <h2 className="text-5xl font-bold">4.9</h2>
+      <p className="mt-2 text-lg text-gray-200">Rating</p>
+    </div>
+
+  </div>
+
+</section>
 
       {/* PRODUCTS TITLE */}
       <div className="text-center mt-16">
